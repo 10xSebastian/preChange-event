@@ -1,9 +1,6 @@
 ###
-
 jQuery Plugin for having a preChange event triggered even when the field was not blured 
-
 after the default waiting time or the one that is provided with options.delay
-
 ###
 
 $ = jQuery
@@ -43,3 +40,4 @@ class window.PreChange
       target.data "lastValue", target.val()
       target.data "timeout", null
     , @delay
+
