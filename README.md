@@ -1,7 +1,7 @@
 preChange-event
 ===============
 
-Behaves like the change event (is only triggered when content changed) but triggers when the user pauses typing without leaving the input field, so before the change event fires.
+Custom event for input fields. Behaves like the change event but directly fires after the user pause typing without leaving the input field.
 
 Demo
 ===============
