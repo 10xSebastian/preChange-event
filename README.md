@@ -9,7 +9,7 @@ Demo
 
 How to use
 ===============
-This custom event only triggers on elements that you enable before, remember that!
+This custom event only triggers on elements that you enabled before, remember that!
 
 ```
 # for situations where the element is already part of the dom
