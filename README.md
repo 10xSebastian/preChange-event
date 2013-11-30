@@ -5,6 +5,7 @@ Custom event for input fields. Behaves like the change event but directly fires 
 
 Demo
 ===============
+[Try it out](https://rawgithub.com/spape/preChange-event/master/demo.html)
 
 How to use
 ===============
