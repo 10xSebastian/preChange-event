@@ -17,6 +17,3 @@ When the user types into an input field and pauses typing for a given delay the 
 Dependencies
 ===============
 * jQuery
-
-Tests
-===============
