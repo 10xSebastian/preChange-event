@@ -13,5 +13,9 @@ How it works
 ===============
 When the user types into an input field and pauses typing for a given delay the preChange-event is triggered when the content is different compared to the content of the last triggered preChange-event.
 
-Test
+Dependencies
+===============
+* jQuery
+
+Tests
 ===============
