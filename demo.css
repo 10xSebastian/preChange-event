@@ -1,0 +1,61 @@
+/* line 5, src/css/demo.sass */
+html {
+  height: 100%;
+  background: #f0f0f0;
+}
+
+/* line 9, src/css/demo.sass */
+body {
+  height: 100%;
+}
+
+/* line 12, src/css/demo.sass */
+table {
+  height: 100%;
+  width: 100%;
+}
+/* line 16, src/css/demo.sass */
+table tr td {
+  text-align: center;
+}
+
+/* line 19, src/css/demo.sass */
+input, .event {
+  font-size: 2em;
+  border-top: 1px solid #b4b4b4;
+  border-left: 1px solid #b4b4b4;
+  border-bottom: 1px solid #c8c8c8;
+  border-right: 1px solid #c8c8c8;
+  padding: 0.6em;
+  width: 50%;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  -ms-border-radius: 0.2em;
+  -o-border-radius: 0.2em;
+  border-radius: 0.2em;
+  -webkit-box-shadow: -1px -1px 0 white, 1px 1px 0 white;
+  -moz-box-shadow: -1px -1px 0 white, 1px 1px 0 white;
+  box-shadow: -1px -1px 0 white, 1px 1px 0 white;
+}
+
+/* line 30, src/css/demo.sass */
+.event {
+  background: rgba(255, 255, 255, 0);
+  margin: 0 auto 0.2em;
+  font-size: 1.4em;
+  padding: 0.2em;
+  -webkit-transition: background 1.2s;
+  -moz-transition: background 1.2s;
+  -o-transition: background 1.2s;
+  transition: background 1.2s;
+}
+/* line 38, src/css/demo.sass */
+.event.ui-new {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* line 41, src/css/demo.sass */
+#events {
+  max-height: 10.5em;
+  overflow: auto;
+}

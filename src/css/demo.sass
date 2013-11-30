@@ -1,0 +1,44 @@
+@import "compass/css3/border-radius"
+@import "compass/css3/box-shadow"
+@import "compass/css3/transition"
+
+html
+  height: 100%
+  background: rgb(240,240,240)
+
+body
+  height: 100%
+
+table
+  height: 100%
+  width: 100%
+
+  tr td
+    text-align: center
+
+input
+  font-size: 2em
+  border-top: 1px solid rgb(180,180,180)
+  border-left: 1px solid rgb(180,180,180)
+  border-bottom: 1px solid rgb(200,200,200)
+  border-right: 1px solid rgb(200,200,200)
+  padding: 0.6em
+  width: 50%
+  @include border-radius(0.2em)
+  @include box-shadow(-1px -1px 0 rgb(255,255,255), 1px 1px 0 rgb(255,255,255))
+
+.event
+  background: rgba(255,255,255,0)
+  margin: 0 auto 0.2em
+  font-size: 1.4em
+  padding: 0.2em
+  @include transition(background 1.2s)
+  @extend input
+
+  &.ui-new
+    background: rgba(255,255,255,0.8)
+
+#events
+  max-height: 10.5em
+  overflow: auto
+

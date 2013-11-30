@@ -1,2 +1,5 @@
+gem 'compass'
 gem 'guard'
 gem 'guard-shell'
+gem 'haml'
+gem 'sass'

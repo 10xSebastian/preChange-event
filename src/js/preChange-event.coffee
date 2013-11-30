@@ -10,7 +10,7 @@ $.extend $.fn, preChange: (options)-> @each -> $(this).data('_preChange_event', 
 class window.PreChange
   
   constructor:(target, options)->
-    @delay = if options? and options.delay? then options.delay else 500 
+    @delay = if options? and options.delay? then options.delay else 400 
     @target = target
     do @delegateEvents
     this
@@ -31,12 +31,12 @@ class window.PreChange
   validate: (e)=>
     target = $ e.currentTarget
     target.data "lastValue", target.val() unless target.data("lastValue")?
-    target.data "lastValue", "" if e.type == "change"
+    target.data "lastValue", "" if e.type == "change" and target.val().length == 0
     if target.data("timeout")?
       clearTimeout target.data("timeout")
       target.data "timeout", null
     target.data "timeout", setTimeout =>
-      target.trigger("preChange") if target.data("lastValue") != target.val()
+      target.trigger("preChange", target.val()) if target.data("lastValue") != target.val()
       target.data "lastValue", target.val()
       target.data "timeout", null
     , @delay

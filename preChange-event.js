@@ -26,7 +26,7 @@ after the default waiting time or the one that is provided with options.delay
 
     function PreChange(target, options) {
       this.validate = __bind(this.validate, this);
-      this.delay = (options != null) && (options.delay != null) ? options.delay : 500;
+      this.delay = (options != null) && (options.delay != null) ? options.delay : 400;
       this.target = target;
       this.delegateEvents();
       this;
@@ -59,7 +59,7 @@ after the default waiting time or the one that is provided with options.delay
       if (target.data("lastValue") == null) {
         target.data("lastValue", target.val());
       }
-      if (e.type === "change") {
+      if (e.type === "change" && target.val().length === 0) {
         target.data("lastValue", "");
       }
       if (target.data("timeout") != null) {
@@ -68,7 +68,7 @@ after the default waiting time or the one that is provided with options.delay
       }
       return target.data("timeout", setTimeout(function() {
         if (target.data("lastValue") !== target.val()) {
-          target.trigger("preChange");
+          target.trigger("preChange", target.val());
         }
         target.data("lastValue", target.val());
         return target.data("timeout", null);
