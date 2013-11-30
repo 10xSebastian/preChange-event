@@ -31,6 +31,19 @@ $('document').on('preChange', '#myinput', function(){
 
 ```
 
+Options
+===============
+You can change the delay between stop typing and event trigger, by passing milliseconds as second argument:
+
+```
+# trigger immediately
+$('#myinput').preChange(0);
+
+# or
+new PreChange('#myinput', 0);
+
+```
+
 
 How it works
 ===============
