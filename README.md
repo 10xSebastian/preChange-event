@@ -9,6 +9,28 @@ Demo
 
 How to use
 ===============
+This custom event only triggers on elements that you enable before, remember that!
+
+```
+# for situations where the element is already part of the dom
+
+$('#myinput').preChange();
+$('#myinput').on('preChange', function(){
+  console.log("do what you want here...")
+});
+
+```
+
+```
+# for situations where the element comes to the dome later (e.g. when u use js-templating etc.)
+
+new PreChange('#myinput');
+$('document').on('preChange', '#myinput', function(){
+  console.log("do what you want here...")
+});
+
+```
+
 
 How it works
 ===============
